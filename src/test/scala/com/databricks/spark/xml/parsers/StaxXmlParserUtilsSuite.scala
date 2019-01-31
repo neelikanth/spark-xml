@@ -28,7 +28,7 @@ import com.databricks.spark.xml.XmlOptions
 final class StaxXmlParserUtilsSuite extends FunSuite with BeforeAndAfterAll {
 
   private val factory = XMLInputFactory.newInstance()
-  factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, false)
+  factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, true)
   factory.setProperty(XMLInputFactory.IS_COALESCING, true)
 
   test("Test if elements are skipped until the given event type") {

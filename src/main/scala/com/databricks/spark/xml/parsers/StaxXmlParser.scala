@@ -81,7 +81,7 @@ private[xml] object StaxXmlParser extends Serializable {
 
     xml.mapPartitions { iter =>
       val factory = XMLInputFactory.newInstance()
-      factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, false)
+      factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, true)
       factory.setProperty(XMLInputFactory.IS_COALESCING, true)
       val filter = new EventFilter {
         override def accept(event: XMLEvent): Boolean =
